@@ -14,10 +14,9 @@ class Root extends Component {
     renderProducts() {
         const {category} = this.props;
         const products = category.get('products');
-        let view = '';
+        let elements = [];
         if (products) {
-            console.log(products);
-            view = products.map((product, index) =>
+            elements = products.map((product, index) =>
                 <ProductField key={index}
                               label={product.get('name')}
                               rating={product.get('avgRating')}
@@ -28,7 +27,7 @@ class Root extends Component {
                               link={product.get('comparePricesLink')} />
             );
         }
-        return view;
+        return elements;
     }
 
     render() {
