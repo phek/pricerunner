@@ -35,7 +35,7 @@ export default class ProductField extends Component {
                     </div>
                     <div className='product-lower-desc'>
                         <p>{stores} butiker</p>
-                        <p>fr. <span>{Math.round(price.get('value'))} {price.get('currency')}</span></p>
+                        <p>fr. <span>{formatPrice(price)}</span></p>
                     </div>
                 </div>
                 <div className='product-inner-right-container'>
@@ -44,6 +44,16 @@ export default class ProductField extends Component {
             </div>
         );
     }
+}
+
+function formatPrice(price) {
+    let lookupExtension = {
+        SEK: 'kr'
+    };
+    let amount = Math.round(price.get('value'));
+    let currency = price.get('currency');
+    let extension = lookupExtension[currency] ? lookupExtension[currency] : currency;
+    return amount + ' ' + extension;
 }
 
 ProductField.propTypes = {
