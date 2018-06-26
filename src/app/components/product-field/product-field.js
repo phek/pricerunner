@@ -47,11 +47,11 @@ export default class ProductField extends Component {
 }
 
 ProductField.propTypes = {
-    label: PropTypes.string,
-    specs: PropTypes.string,
-    img: PropTypes.string,
-    link: PropTypes.func,
-    rating: PropTypes.string,
-    price: PropTypes.object,
-    stores: PropTypes.string
+    label: PropTypes.string.isRequired,
+    specs: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    rating: PropTypes.string.isRequired,
+    price: PropTypes.object.isRequired,
+    stores: PropTypes.string.isRequired
 };
