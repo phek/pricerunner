@@ -7,10 +7,14 @@ export default class ProductField extends Component {
         let rating = Math.round(this.props.rating);
         let elements = [];
         let i = 0;
+
+        /* Add filled stars */
         while (i < rating && i < 5) {
             elements.push(<span className='star-filled' key={i}>☆</span>);
             i++;
         }
+
+        /* Make the rest empty stars */
         while (i < 5) {
             elements.push(<span key={i}>☆</span>);
             i++;
@@ -21,7 +25,7 @@ export default class ProductField extends Component {
     render() {
         const {label, specs, img, link, price, stores} = this.props;
         return (
-            <div className='product-container'>
+            <a href={link} className='product-container'>
                 <div className='product-inner-left-container'>
                     <img src={img} />
                     <div className='product-stars'>
@@ -39,9 +43,9 @@ export default class ProductField extends Component {
                     </div>
                 </div>
                 <div className='product-inner-right-container'>
-                    <a className='product-button' href={link}>Jämför pris</a>
+                    <div className='product-button'>Jämför pris</div>
                 </div>
-            </div>
+            </a>
         );
     }
 }
