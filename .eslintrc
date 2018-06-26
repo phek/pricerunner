@@ -1,0 +1,47 @@
+{
+    "plugins": [
+        "react"
+    ],
+    "settings": {
+        "react": {
+            "createClass": "createClass", // Regex for Component Factory to use, default to "createClass"
+            "pragma": "React",  // Pragma to use, default to "React"
+        }
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "rules": {
+        "eqeqeq": 1,
+        "dot-notation": 1,
+        "no-redeclare": 0,
+        "semi": 2,
+        "max-len": [1, 120, 2, {"ignoreComments": true}],
+        "no-multiple-empty-lines": ["warn", { "max": 1, "maxEOF": 1 }],
+        "spaced-comment": ["error", "always", { "exceptions": ["-", "+"] }],
+        "quotes": [1, "single"],
+        "semi-spacing": 1,
+        "no-mixed-spaces-and-tabs": 1,
+        "no-extra-semi": 1,
+        "space-before-blocks": ["error", "always"],
+        "keyword-spacing": [2, {"before": true, "after": true}],
+        "eol-last": ["error", "always"],
+        "constructor-super": "error",
+        "no-useless-constructor": "error",
+        "no-duplicate-imports": "error",
+        "no-trailing-spaces": "warn",
+        "no-tabs": "error",
+        "react/prefer-es6-class": ["error", "always"],
+        "react/no-direct-mutation-state": "error",
+        "react/jsx-closing-bracket-location": ["error", "after-props"],
+        "react/jsx-tag-spacing": ["warn", { "beforeSelfClosing": "always" }],
+        "react/jsx-uses-vars": "error",
+        "react/jsx-uses-react": "error",
+        "react/jsx-no-duplicate-props": "error"
+    }
+}
