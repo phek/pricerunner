@@ -1,6 +1,3 @@
-$starColor: #fff9b5;
-$starSize: 30px;
-
 .product-container {
   display: flex;
   background-color: #fff;
@@ -84,3 +81,5 @@ $starSize: 30px;
   border-bottom-width: 2px;
   text-decoration: none;
 }
+
+@import "product-field.responsive";

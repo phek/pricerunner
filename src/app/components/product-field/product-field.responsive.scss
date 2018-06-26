@@ -1,0 +1,37 @@
+/* For mobiles: */
+@media only screen and (max-width: 600px) {
+  .product-container:not(:first-child) {
+    margin-top: 0;
+  }
+
+  .product-container:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .product-inner-right-container {
+    display: none;
+  }
+
+  .product-upper-desc p {
+    display: none;
+  }
+
+  .product-lower-desc {
+    flex-direction: row-reverse;
+  }
+
+  .product-lower-desc p:first-child {
+    margin-right: auto;
+  }
+
+  .product-lower-desc p:last-child {
+    margin-right: 40px;
+  }
+}
+
+/* For tablets: */
+@media only screen and (max-width: 768px) {
+  .product-inner-right-container {
+    padding-left: 10px;
+  }
+}
