@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'http://www.pricerunner.se',
+    baseURL: 'https://www.pricerunner.se',
 });
 
 function getJsonHeaders() {
