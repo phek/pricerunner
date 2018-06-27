@@ -65,7 +65,7 @@ ProductField.propTypes = {
     specs: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    rating: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
     price: PropTypes.object.isRequired,
-    stores: PropTypes.string.isRequired
+    stores: PropTypes.number.isRequired
 };
