@@ -19,8 +19,8 @@ class Root extends Component {
             elements = products.map((product, index) =>
                 <ProductField key={index}
                               label={product.get('name')}
-                              rating={product.get('avgRating')}
-                              stores={product.get('retailerCount')}
+                              rating={Number(product.get('avgRating'))}
+                              stores={Number(product.get('retailerCount'))}
                               specs={product.get('shortDescription')}
                               img={getProductImageLink(product)}
                               price={product.get('localMinPrice')}
